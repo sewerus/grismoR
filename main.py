@@ -23,9 +23,9 @@ def entry_iso_graph(graph_1: Graph, graph_2: Graph):
     graph_1.entry_iso_by(graph_2.neighbour_matrix)
 
 
-class Grismo(QDialog):
+class GrismoR(QDialog):
     def __init__(self, parent=None):
-        super(Grismo, self).__init__(parent)
+        super(GrismoR, self).__init__(parent)
 
         layout = QHBoxLayout()
 
@@ -397,7 +397,7 @@ class Grismo(QDialog):
         self.graph_1.display()
         self.graph_2.display()
         self.setLayout(layout)
-        self.setWindowTitle("Grismo - Badanie izomorfizmu grafów")
+        self.setWindowTitle("GrismoR - Badanie izomorfizmu grafów - obliczenia równoległe")
         self.showMaximized()
         self.setFocus()
         systray_icon = QIcon(resource_path("icon.png"))
@@ -407,7 +407,7 @@ class Grismo(QDialog):
         menu.addAction(close)
         systray.setContextMenu(menu)
         systray.show()
-        systray.showMessage("Grismo", "Program powstał w czasie pandemii 2020.", QSystemTrayIcon.Information)
+        systray.showMessage("GrismoR", "Program powstał w czasie pandemii 2021.", QSystemTrayIcon.Information)
         close.triggered.connect(self.close)
 
     def random_graph_1(self):
@@ -557,7 +557,7 @@ class Grismo(QDialog):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    grismo_test = Grismo()
+    grismor_test = GrismoR()
 
     splash_image = QPixmap(resource_path("icon.png"))
     splash = QSplashScreen(splash_image)
@@ -565,5 +565,5 @@ if __name__ == '__main__':
 
     time.sleep(1)
 
-    grismo_test.show()
+    grismor_test.show()
 sys.exit(app.exec_())
