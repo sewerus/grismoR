@@ -17,11 +17,10 @@ Graph Isomorphism Problem Solver with Multiprocessing by Seweryn Panek Wrocław 
 	* [Conducted research](#conducted-research)
 
 ## Implemented algorithms
--   Single-threaded brutal method,
--   Method based on BFS algorithm,
--   Method based on DFS algorithm,
--   Weisfeiler-Lehman's method,
--   Method based on graph spectrum comparison.
+- brutal single-threaded method,  
+- brutal method with parallel independent threads,  
+- brutal method with parallel communicating threads,  
+- Weisfeiler-Lehman algorithm (appendix).
 
 ## Types of tests
 -   single test for given graphs,
